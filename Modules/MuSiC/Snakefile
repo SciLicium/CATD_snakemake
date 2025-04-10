@@ -23,7 +23,7 @@
 rule MuSiC_install:
     input:
     output:
-        touch("MuSiC_installed.done")
+        touch("Modules/MuSiC/MuSiC_installed.done")
     conda:
         "env.yaml"
     shell:
@@ -33,7 +33,7 @@ rule MuSiC_install:
 
 rule MuSiC_run:
     input:
-        installed = "MuSiC_installed.done",
+        installed = "Modules/MuSiC/MuSiC_installed.done",
         phendata = getPhenData(getC0(getBulks('{sample}'), '{sample}'), '{sample}')
 
     output:
