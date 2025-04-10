@@ -48,7 +48,7 @@ rule generatePseudobulks:
     shell:
         """
         mkdir -p Input/Pseudobulks
-        Rscript Modules/Psuedobulk/randomGen.R Input/Cell_splits/{wildcards.sample}_gen.rds {params} {threads}
+        Rscript Modules/Pseudobulk/randomGen.R Input/Cell_splits/{wildcards.sample}_gen.rds {params} {threads}
         """
 
 
@@ -81,5 +81,5 @@ rule generateSeededPseudobulks:
     shell:
         """
         mkdir -p Input/Pseudobulks
-        Rscript Modules/Psuedobulk/randomGen_seeded.R Input/Cell_splits/{wildcards.sample}_gen_seeded.rds {params} {threads}
+        Rscript Modules/Pseudobulk/randomGen_seeded.R Input/Cell_splits/{wildcards.sample}_gen_seeded.rds {params} {threads}
         """
