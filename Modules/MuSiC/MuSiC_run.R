@@ -1,36 +1,10 @@
 ## MuSiC deconv script
 ##
 ## @zgr2788
-library('devtools')
 
-#install SingleCellExperiment
-if (!require("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-
-BiocManager::install("SingleCellExperiment",force=TRUE)
-
-#install TOAST
-if (!require("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-
-BiocManager::install("TOAST",force=TRUE)
-
-#install Biobase
-if (!require("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-
-BiocManager::install("Biobase",force=TRUE)
-
-# install the MuSiC package
-devtools::install_github('xuranw/MuSiC')
-
-install.packages('energy',repos='http://cran.us.r-project.org')
 suppressMessages(library(MuSiC))
 suppressMessages(library(Biobase))
-suppressMessages(library(energy))
 suppressMessages(library(dplyr))
-#install.packages('SeuratObject',repos='http://cran.us.r-project.org')
-#suppressMessages(library(SeuratObject))
 suppressMessages(library(SingleCellExperiment))
 
 
