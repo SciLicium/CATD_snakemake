@@ -19,7 +19,7 @@ cibersort_output<- cibersort_output[1:(length(cibersort_output)-3)]
 # Convert to a data frame or any necessary processing
 res<- t(cibersort_output)
 #Save the data frame as an RDS file 
-if (filename_P != 'Modules/Psuedobulk/dummy_props.rds') res <- res[order(match(rownames(res), rownames(P))),]
+if (filename_P != 'Modules/Pseudobulk/dummy_props.rds') res <- res[order(match(rownames(res), rownames(P))),]
 
 
 

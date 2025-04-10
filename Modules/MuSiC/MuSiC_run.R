@@ -49,7 +49,7 @@ T <- exprs(T)
 res <- music_prop(T, C0, clusters = "cellType", samples = "sampleID", markers = NULL, normalize = FALSE, verbose = TRUE)$Est.prop.weighted
 res <- t(res)
 
-if (filename_P != 'Modules/Psuedobulk/dummy_props.rds') res <- res[order(match(rownames(res), rownames(P))),]
+if (filename_P != 'Modules/Pseudobulk/dummy_props.rds') res <- res[order(match(rownames(res), rownames(P))),]
 
 #Save and exit
 saveRDS(res, file=filename_O)

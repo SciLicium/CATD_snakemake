@@ -30,7 +30,7 @@ registerDoParallel(cores)
 
 filename <- args[1] #Name of T_ref
 mode <- args[2] #Mode to be used
-cellCount <- as.numeric(args[3]) #How many cells to pool for each psuedobulk
+cellCount <- as.numeric(args[3]) #How many cells to pool for each Pseudobulk
 nSamples <- as.numeric(args[4]) #How many samples to generate
 tryCatch(
   expr={

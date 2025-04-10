@@ -59,7 +59,7 @@ res = apply(res,2,function(x) ifelse(x < 0, 0, x)) #Explicit non-negativity cons
 res = apply(res,2,function(x) x/sum(x)) #Explicit STO constraint
 res[is.na(res)] <- 0     
 
-if (filename_P != 'Modules/Psuedobulk/dummy_props.rds') res <- res[order(match(rownames(res), rownames(P))),]
+if (filename_P != 'Modules/Pseudobulk/dummy_props.rds') res <- res[order(match(rownames(res), rownames(P))),]
 
 #Save and exit
 saveRDS(res, file=filename_O)

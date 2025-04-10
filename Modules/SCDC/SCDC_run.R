@@ -47,7 +47,7 @@ C0 <- ExpressionSet(C0, phenoData = as(phenData, "AnnotatedDataFrame"))
 
 #Get results and reorder the matrices for correspondence
 res <- t(SCDC::SCDC_prop(bulk.eset = T, sc.eset = C0, ct.varname = "cellType", sample = "sampleID", ct.sub = levels(phenData$cellType), iter.max = 200)$prop.est.mvw)
-if (filename_P != 'Modules/Psuedobulk/dummy_props.rds') res <- res[order(match(rownames(res), rownames(P))),]
+if (filename_P != 'Modules/Pseudobulk/dummy_props.rds') res <- res[order(match(rownames(res), rownames(P))),]
 
 #Save and exit
 saveRDS(res, file=filename_O)

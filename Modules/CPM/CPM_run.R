@@ -48,6 +48,6 @@ message("CPM running DONE")
 #res = apply(res,2,function(x) ifelse(x < 0, 0, x)) #explicit non-negativity constraint
 #res = apply(res,2,function(x) x/sum(x)) #explicit STO constrain
 
-if (filename_P != 'Modules/Psuedobulk/dummy_props.rds') res = res[order(match(rownames(res), rownames(P))),]
+if (filename_P != 'Modules/Pseudobulk/dummy_props.rds') res = res[order(match(rownames(res), rownames(P))),]
 
 saveRDS(res, file=filename_O)
