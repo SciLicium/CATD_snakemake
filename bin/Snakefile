@@ -98,7 +98,7 @@ def getBulks(sampleName):
         if not config['realBulk-noProp']:
             inList.append(filename_P)
         else:
-            inList.append("Modules/Psuedobulk/dummy_props.rds")
+            inList.append("Modules/Pseudobulk/dummy_props.rds")
 
         return inList
 
@@ -185,7 +185,7 @@ def getConsensus(sampleName):
 include: "Modules/Convert_split/Snakefile"
 
 if not (config['realBulk'] or config['realBulk-noProp']):
-    include: "Modules/Psuedobulk/Snakefile"
+    include: "Modules/Pseudobulk/Snakefile"
 
 include: "Modules/C_generation/Snakefile"
 include: "Modules/Scale_transform/Snakefile"
