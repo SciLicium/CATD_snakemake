@@ -30,7 +30,7 @@ def getMB(val):
 
 
 def getHeatmap(sampleName):
-    return str("Plots/" + sampleName + "_metricsHeatmap.png")
+    return str("Plots/" + sampleName + "_metricsHeatmap.pdf")
 
 
 
@@ -40,7 +40,7 @@ def getRunSums(sampleName):
 
 
 def getBenchmarks(sampleName):
-        return str(sampleName + "_benchmarks_summarized.png")
+        return str(sampleName + "_benchmarks_summarized.pdf")
 
 
 
@@ -54,7 +54,7 @@ def getVioPlots(sampleName):
 
 def getPlots(sampleName):
         metricsList = config['resMetrics']
-        plotsList = [str("Plots/" + sampleName + "_barplot_" + metric + ".png") for metric in metricsList]
+        plotsList = [str("Plots/" + sampleName + "_barplot_" + metric + ".pdf") for metric in metricsList]
 
         return(plotsList)
 
