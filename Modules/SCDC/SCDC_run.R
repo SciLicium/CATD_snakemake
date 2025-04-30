@@ -1,20 +1,9 @@
 ## SCDC deconv script
 ##
 ## @zgr2788
+## @SciLiciumTheo
 
 
-#Load SCDC
-if (!require("L1pack", quietly = TRUE)){
-  install.packages("Modules/SCDC/fastmatrix_0.4.tar.gz", repos=NULL, type = "source")
-  install.packages("Modules/SCDC/L1pack_0.40.tar.gz", repos=NULL, type = "source")
-
-}
-
-suppressMessages(library(remotes))
-suppressMessages(library(devtools))
-options(timeout=400) # to avoid problems when connection slow
-remotes::install_github("renozao/xbioc")
-devtools::install_github("meichendong/SCDC")
 suppressMessages(library(SCDC))
 suppressMessages(library(Biobase))
 
