@@ -4,8 +4,6 @@
 
 
 #Load CDseq
-suppressMessages(library(devtools))
-devtools::install_github("kkang7/CDSeq_R_Package")
 suppressMessages(library(CDSeq))
 suppressMessages(library(energy))
 
